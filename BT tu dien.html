@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT tu dien</title>
+</head>
+<body>
+    <h2>Tu Dien</h2>
+
+    <input type="text" id="nano">
+    <input type="button" value="Dich" onclick="timkiem()">
+    <p id="result"></p>
+   <script>
+       // Gọi 2 mảng khác nhau
+     let tv = ["mot","hai","ba","bon","nam"]
+     let ta = ["one","two","three","four","five"]
+     function timkiem(){
+       // Gọi giá trị cho ô input
+         let key = document.getElementById("nano").value;
+         let index = -1
+
+         for (let i = 0; i < tv.length; i++) {
+             if(key == tv[i]){
+                 index = i
+                  break;
+             }
+
+         } let result;
+         if ( index == -1){
+             result = "khong tim thay"
+         }else {
+             result = " nghia cua tu " + key +  " la "  +  ta[index]
+         }
+         document.getElementById("result").innerText = result
+     }
+
+   </script>
+</body>
+</html>
